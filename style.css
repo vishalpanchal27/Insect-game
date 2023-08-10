@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@400;900&family=REM&display=swap');
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: handjet;
+
+}
+
+.heroSection {
+    position: relative;
+    top: 0;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 5rem;
+    text-align: center;
+    background-color: antiquewhite;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+}
+
+.heroSection button {
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    /* transition: translateY(100%); */
+}
+
+.transitionActive {
+    transform: translateY(-100vh);
+}
+
+.insects {
+    height: 150px;
+    width: 150px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 10px;
+    cursor: pointer;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+}
+
+section p {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+    border: 2px solid red;
+}
+
+.game p {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.gameScreen {
+    height: 90vh;
+}
+
+.insect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-out;
+}
+
+.gameStartScreeen {
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease, opacity 0.5s ease;
+}
+
+.restart {
+    transform: translateY(1px);
+}
+
+.insect-position {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 50px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: rotateKrdo 700ms infinite;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotateKrdo {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mouseCursor {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /* From https://css.glass */
+    background: rgba(166, 17, 17, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(186, 21, 21, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(163, 22, 22, 0.3);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+.first-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* .alert {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    height: 8rem;
+    text-align: center;
+    font-size: 1.2rem;
+
+    transition: transform 1s ease opacity 0.5s ease;
+} */
+
+/* .showAlert {
+    transform: translateY(200px);
+} */
+
+@media (max-width:350px) {
+    .heroSection {
+        font-size: 2.5rem;
+    }
+
+    .heroSection button {
+        font-size: 1.2rem;
+        padding: 0.3rem 1rem;
+    }
+
+    section p {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .insects {
+        height: 122px;
+        width: 122px;
+        margin: 8px;
+    }
+
+    .game p {
+        font-size: 1.3rem;
+    }
+
+    .alert {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        text-align: center;
+    }
+}
